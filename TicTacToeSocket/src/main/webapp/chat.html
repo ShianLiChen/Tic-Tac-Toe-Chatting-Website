@@ -1,0 +1,125 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <!--for custom fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=News+Cycle&display=swap" rel="stylesheet">
+  <!--for css files-->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body style="background-color: #1b1b1f;
+             background-position-y: 25%;">
+<header>
+<!--  navbar for the user-->
+  <nav>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="index.html#home">Home</a></li>
+      <li><a class="nav-link" href="chat.html">Chat</a></li>
+      <li><a class="nav-link" href="instructions.html">Instructions</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<!--title of the room -->
+<h1 style = "text-align: center; color: #8d8c94;">
+  Chatroom
+</h1>
+
+<body style="margin:0; background: #575555;"></body>
+
+<div class="rightside">
+</div>
+
+<div class="chat-messages"></div>
+
+<div class="leftside2">
+  <div>
+<!--    place to show room codes and to enter a new room -->
+    <div id = "boxleft2">
+      <div id="room">
+        <input type="text" id="room-code" placeholder="Enter room code... " style="
+          border: 1px solid #cad2dc;
+          border-radius: 1px;
+          background-color: #1b1b1f;
+          color: #cad2dc;
+          width: 60%;
+          align-items: center;
+          justify-content: space-between;">
+        <br>
+        <br>
+        <button id="btroom" class = "buttonDes1" onclick="newRoom()">ENTER</button>
+      </div>
+      <br>
+      <br>
+      <h3 style="color: #b5b6b5">List of Chat Rooms:</h3>
+      <div id = "roomList"></div>
+    </div>
+  </div>
+</div>
+
+
+<div>
+<!--  displays the chat log and the chat input -->
+  <textarea title="Chat Log" id="log" style="
+    resize: none;
+    width: 70%;
+    height: 600px;
+    background-color: #1b1b1f;
+    border: 1px solid #cad2dc;
+    border-radius: 1px;
+    color: #cad2dc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    float: left;" readonly >
+  </textarea>
+
+  <input title="Chat Input" placeholder="Enter a message" id="input" type="text" style="
+    border: 1px solid #cad2dc;
+    border-radius: 1px;
+    background-color: #1b1b1f;
+    color: #cad2dc;
+    width: 70%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;" autofocus/>
+
+</div>
+
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+<link rel="stylesheet" href="css/normalize.css">
+
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

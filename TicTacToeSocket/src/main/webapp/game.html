@@ -1,0 +1,171 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <!--for custom fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=News+Cycle&display=swap" rel="stylesheet">
+    <!--for css files-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body style="background-color: #1b1b1f;
+             background-position-y: 25%;">
+<header>
+<!--    navbar for users-->
+    <nav>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="index.html#home">Home</a></li>
+            <li><a class="nav-link" href="chat.html">Chat</a></li>
+            <li><a class="nav-link" href="instructions.html">Instructions</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!--title of the page-->
+<h1 style = "text-align: center; color: #8d8c94;">
+    Game On!
+</h1>
+
+<div class="rightside">
+</div>
+
+<div class="chat-messages"></div>
+
+<div class="leftside">
+    <div>
+<!--        shows the list of rooms and allows user to enter new rooms-->
+        <div id = "boxleft">
+            <div id="room">
+                <input type="text" id="room-code" placeholder="Enter room code... " style="
+                  border: 1px solid #cad2dc;
+                  border-radius: 1px;
+                  background-color: #1b1b1f;
+                  color: #cad2dc;
+                  width: 70%;
+                  align-items: center;
+                  justify-content: space-between;">
+                <br>
+                <br>
+                <button id="btroom" class = "buttonDes1" onclick="newRoom()">ENTER</button>
+            </div>
+            <br>
+            <br>
+            <h3 style="color: #b5b6b5">List of Chat Rooms:</h3>
+            <div id = "roomList"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="game">
+    <div class="gameParts">
+        <!--        shows the chat log and input for users to chat while playing the game-->
+        <textarea title="Chat Log" id="log" readonly style="
+            resize: none;
+            width: 30vw;
+            height: 59.35vh;
+            background-color: #1b1b1f;
+            border: 2px solid #cad2dc;
+            border-radius: 1px;
+            color: #cad2dc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            overflow-y: scroll;">
+        </textarea>
+        <input title="Chat Input" placeholder="Enter Text: " id="input" type="text" style="
+            border: 2px solid #cad2dc;
+            border-radius: 1px;
+            background-color: #1b1b1f;
+            color: #cad2dc;
+            width: 30vw;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;" autofocus/>
+    </div>
+    <!--    Tic tac toe game table and area-->
+    <div id="gamePlay">
+        <table id="3x3">
+            <tr>
+                <td id="11" onclick="play(this);"></td>
+                <td id="12" onclick="play(this)"></td>
+                <td id="13" onclick="play(this)"></td>
+            </tr>
+            <tr>
+                <td id="21" onclick="play(this)"></td>
+                <td id="22" onclick="play(this)"></td>
+                <td id="23" onclick="play(this)"></td>
+            </tr>
+            <tr>
+                <td id="31" onclick="play(this)"></td>
+                <td id="32" onclick="play(this)"></td>
+                <td id="33" onclick="play(this)"></td>
+            </tr>
+        </table>
+        <table id="4x4" style="display: none">
+            <tr>
+                <td id="c11" onclick="play4x4(this);"></td>
+                <td id="c12" onclick="play4x4(this)"></td>
+                <td id="c13" onclick="play4x4(this)"></td>
+                <td id="c14" onclick="play4x4(this)"></td>
+            </tr>
+            <tr>
+                <td id="c21" onclick="play4x4(this)"></td>
+                <td id="c22" onclick="play4x4(this)"></td>
+                <td id="c23" onclick="play4x4(this)"></td>
+                <td id="c24" onclick="play4x4(this)"></td>
+            </tr>
+            <tr>
+                <td id="c31" onclick="play4x4(this)"></td>
+                <td id="c32" onclick="play4x4(this)"></td>
+                <td id="c33" onclick="play4x4(this)"></td>
+                <td id="c34" onclick="play4x4(this)"></td>
+            </tr>
+            <tr>
+                <td id="c41" onclick="play4x4(this)"></td>
+                <td id="c42" onclick="play4x4(this)"></td>
+                <td id="c43" onclick="play4x4(this)"></td>
+                <td id="c44" onclick="play4x4(this)"></td>
+            </tr>
+        </table>
+        <!--        allows game board to be reset to start a new game-->
+        <button class="btnGame" type="newGameTrad" id="newGameTrad" onclick="newGameTrad()">New Game</button>
+        <button class="btnGame" type="4x4GameMode" id="4x4Btn" onclick="new4x4()">Switch to 4x4</button>
+        <button class="btnGame" type="3x3GameMode" id="3x3Btn" onclick="new3x3()" style="display: none">Switch to 3x3</button>
+    </div>
+
+</div>
+
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+<link rel="stylesheet" href="css/normalize.css">
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

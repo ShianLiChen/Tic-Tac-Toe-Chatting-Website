@@ -1,0 +1,273 @@
+/*general page styling*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Didact Gothic', sans-serif;
+
+}
+button {
+    font-family: 'Didact Gothic', sans-serif;
+    /*other font UNUSED*/
+    /*font-family: 'News Cycle', sans-serif;*/
+}
+
+header {
+    display: flex;
+    width: 90%;
+    height: 10vh;
+    margin: 0;
+    align-items: center;
+}
+
+/*nav bar styling*/
+.logo-container,
+.nav-links{
+    display: flex;
+}
+
+.logo-container {
+    flex: 0;
+    position: fixed;
+    margin: 0px;
+}
+nav {
+    position: fixed;
+    width: 100%;
+    flex: 2;
+    height: 100px;
+    background-image: linear-gradient(to top, rgba(27,27,31,0), rgba(27, 27, 31));
+}
+.nav-links {
+    margin-top: 45px;
+    list-style: none;
+    justify-content: space-around;
+    text-align: right;
+}
+.nav-link {
+    color: #8d8c94;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/*general page styling*/
+.pageLayout {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+.allText {
+    flex: 1;
+}
+.text h1 {
+    margin-left: 60%;
+    font-size: 44px;
+    font-weight: 500;
+    color: #8d8c94;
+}
+.text p {
+    margin-left: 60%;
+    margin-top: 5px;
+    font-size: 22px;
+    color: #8d8c94;
+}
+.buttonDes {
+    margin-left: 60%;
+    padding: 50px 0px 0px 0px;
+}
+.buttonDes1 {
+    border: 2px solid #8d8c94;
+    background: transparent;
+    margin-top: 10px;
+    color: #8d8c94;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+}
+.buttonDes1:hover {
+    background-color: #cad2dc;
+    transition: 0.7s;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*chat page styling */
+.rightside {
+    float: right;
+    width: 30vw;
+}
+
+.leftside {
+    float: left;
+    width: 15vw;
+}
+
+#boxleft {
+    background: rgba(27, 27, 31);
+    margin-top: -1.1vw;
+    height: 32.9vw;
+    padding: 2vh 1vw;
+    margin-right: 0vw;
+}
+/*styling for chat on the game page*/
+.leftside2 {
+    float: left;
+    width: 23vw;
+}
+
+#boxleft2 {
+    background: rgba(27, 27, 31);
+    margin-top: -1.1vw;
+    height: 32.9vw;
+    padding: 2vh 1vw;
+    margin-right: 3vw;
+    text-align: center;
+}
+/*styling for the game*/
+#game{
+    display: flex;
+}
+/*styling for general chat messages*/
+.chat-messages {
+    padding: 2.06vw;
+    /*max-height: 500px;*/
+    /*overflow-y: scroll;*/
+}
+
+.chat-messages .message {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+
+.chat-messages .message .meta {
+    font-size: 15px;
+    font-weight: bold;
+    color: #dbdde8;
+    opacity: 0.7;
+    margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+    color: #777;
+}
+
+/* Join Page */
+.join-container {
+    max-width: 500px;
+    margin: 80px auto;
+    color: #fff;
+}
+
+.join-header {
+    text-align: center;
+    padding: 20px;
+    background: #122ad5;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.join-main {
+    padding: 30px 40px;
+    background: #28378d;
+}
+
+.join-main p {
+    margin-bottom: 20px;
+}
+
+.join-main .form-control {
+    margin-bottom: 20px;
+}
+
+.join-main label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+    font-size: 16px;
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+}
+
+.join-main select {
+    font-size: 16px;
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+}
+
+.join-main .btn {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#room{
+    margin: 0;
+    top: 25%;
+    left: 5%;
+    color: white;
+}
+/*styling of chat log and user input*/
+#log{
+    background-color: #989595
+}
+
+#input{
+    background-color: #989595
+}
+
+::placeholder{
+    color: #cad2dc;
+    opacity: 1;
+}
+/*styling of game board*/
+table{
+    border-collapse: collapse;
+    margin-left: 200px;
+}
+td{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+    border: 5px solid #cad2dc;
+    font-size: 150px;
+    color: #cad2dc;
+}
+.btnGame{
+    margin-left: 53%;
+    margin-top: 20px;
+    border: 2px solid #8d8c94;
+    background: transparent;
+    margin-top: 10px;
+    color: #8d8c94;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+}
+/*styling for about us/contact page*/
+article{
+    margin-left: 35%;
+    color: #8d8c94;
+    font-size: 40px;
+    margin-top: 5%;
+}
+article li{
+    padding: 2%;
+}

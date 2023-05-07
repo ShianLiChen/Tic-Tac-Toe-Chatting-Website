@@ -1,10 +1,9 @@
-# Tic Tac Toe Chatting Website
 # Project Information
 ### Contributors
-* Shian Li Chen
-* Johnny Liang
-* Kevin Jiang
-* Daniel Shklyarman
+* Shian Li Chen: 100813628
+* Johnny Liang: 100832977
+* Kevin Jiang 100824903
+* Daniel Shklyarman: 100851439
 
 ### Description
 This is an implementation of a website through which 2 or more people can play Tic Tac Toe and talk to each other simultaneously. Users can also just talk to each other through the dedicated chat page. Websockets, Java, HTML, CSS and JavaScript were used to create the Tic Tac Toe game logic, the GUI (graphical user interface) and the web sockets that allow multiple users to play against each other. A Chat Resource RESTful API was also created, using Java and Maven, that stores the chat logs and saves them as JSON files to be viewed later.   
@@ -70,6 +69,7 @@ The website's home page allows one to access the game as well as the other web p
 ![image](https://user-images.githubusercontent.com/90335714/232172648-e1cf4bb0-e303-4d14-af3c-ec28ebbe2256.png)
 
 3. After pressing the enter button the web page would change to the page as shown below:
+
 ![image](https://user-images.githubusercontent.com/90335714/232172671-1e814fd7-de4f-4a05-a5e4-8ce9987b78b5.png)
 
 4. In the input area of the chat log, add your username that you will be referred as. 
